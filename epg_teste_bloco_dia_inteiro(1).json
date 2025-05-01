@@ -1,0 +1,52 @@
+{
+  "2025-05-01": {
+    "cartoon": [
+      {
+        "start": "00:00",
+        "end": "23:59",
+        "title": "Programação Infantil",
+        "desc": "Bloco de teste para todos os canais durante o dia inteiro"
+      }
+    ],
+    "disckds": [
+      {
+        "start": "00:00",
+        "end": "23:59",
+        "title": "Programação Infantil",
+        "desc": "Bloco de teste para todos os canais durante o dia inteiro"
+      }
+    ],
+    "disneychan": [
+      {
+        "start": "00:00",
+        "end": "23:59",
+        "title": "Programação Infantil",
+        "desc": "Bloco de teste para todos os canais durante o dia inteiro"
+      }
+    ],
+    "gloob": [
+      {
+        "start": "00:00",
+        "end": "23:59",
+        "title": "Programação Infantil",
+        "desc": "Bloco de teste para todos os canais durante o dia inteiro"
+      }
+    ],
+    "nickjr": [
+      {
+        "start": "00:00",
+        "end": "23:59",
+        "title": "Programação Infantil",
+        "desc": "Bloco de teste para todos os canais durante o dia inteiro"
+      }
+    ],
+    "nickelodeon": [
+      {
+        "start": "00:00",
+        "end": "23:59",
+        "title": "Programação Infantil",
+        "desc": "Bloco de teste para todos os canais durante o dia inteiro"
+      }
+    ]
+  }
+}
