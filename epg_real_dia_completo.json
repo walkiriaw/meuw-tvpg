@@ -1,0 +1,880 @@
+{
+  "2025-05-01": {
+    "cartoon": [
+      {
+        "start": "00:00",
+        "end": "01:00",
+        "title": "Ben 10",
+        "desc": "Episódio de Ben 10"
+      },
+      {
+        "start": "01:00",
+        "end": "02:00",
+        "title": "Gumball",
+        "desc": "Episódio de Gumball"
+      },
+      {
+        "start": "02:00",
+        "end": "03:00",
+        "title": "Clarêncio",
+        "desc": "Episódio de Clarêncio"
+      },
+      {
+        "start": "03:00",
+        "end": "04:00",
+        "title": "Hora de Aventura",
+        "desc": "Episódio de Hora de Aventura"
+      },
+      {
+        "start": "04:00",
+        "end": "05:00",
+        "title": "Ben 10",
+        "desc": "Episódio de Ben 10"
+      },
+      {
+        "start": "05:00",
+        "end": "06:00",
+        "title": "Gumball",
+        "desc": "Episódio de Gumball"
+      },
+      {
+        "start": "06:00",
+        "end": "07:00",
+        "title": "Clarêncio",
+        "desc": "Episódio de Clarêncio"
+      },
+      {
+        "start": "07:00",
+        "end": "08:00",
+        "title": "Hora de Aventura",
+        "desc": "Episódio de Hora de Aventura"
+      },
+      {
+        "start": "08:00",
+        "end": "09:00",
+        "title": "Ben 10",
+        "desc": "Episódio de Ben 10"
+      },
+      {
+        "start": "09:00",
+        "end": "10:00",
+        "title": "Gumball",
+        "desc": "Episódio de Gumball"
+      },
+      {
+        "start": "10:00",
+        "end": "11:00",
+        "title": "Clarêncio",
+        "desc": "Episódio de Clarêncio"
+      },
+      {
+        "start": "11:00",
+        "end": "12:00",
+        "title": "Hora de Aventura",
+        "desc": "Episódio de Hora de Aventura"
+      },
+      {
+        "start": "12:00",
+        "end": "13:00",
+        "title": "Ben 10",
+        "desc": "Episódio de Ben 10"
+      },
+      {
+        "start": "13:00",
+        "end": "14:00",
+        "title": "Gumball",
+        "desc": "Episódio de Gumball"
+      },
+      {
+        "start": "14:00",
+        "end": "15:00",
+        "title": "Clarêncio",
+        "desc": "Episódio de Clarêncio"
+      },
+      {
+        "start": "15:00",
+        "end": "16:00",
+        "title": "Hora de Aventura",
+        "desc": "Episódio de Hora de Aventura"
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "title": "Ben 10",
+        "desc": "Episódio de Ben 10"
+      },
+      {
+        "start": "17:00",
+        "end": "18:00",
+        "title": "Gumball",
+        "desc": "Episódio de Gumball"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00",
+        "title": "Clarêncio",
+        "desc": "Episódio de Clarêncio"
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "title": "Hora de Aventura",
+        "desc": "Episódio de Hora de Aventura"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "title": "Ben 10",
+        "desc": "Episódio de Ben 10"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "title": "Gumball",
+        "desc": "Episódio de Gumball"
+      },
+      {
+        "start": "22:00",
+        "end": "23:00",
+        "title": "Clarêncio",
+        "desc": "Episódio de Clarêncio"
+      },
+      {
+        "start": "23:00",
+        "end": "00:00",
+        "title": "Hora de Aventura",
+        "desc": "Episódio de Hora de Aventura"
+      }
+    ],
+    "disckds": [
+      {
+        "start": "00:00",
+        "end": "01:00",
+        "title": "Peppa Pig",
+        "desc": "Episódio de Peppa Pig"
+      },
+      {
+        "start": "01:00",
+        "end": "02:00",
+        "title": "Doki",
+        "desc": "Episódio de Doki"
+      },
+      {
+        "start": "02:00",
+        "end": "03:00",
+        "title": "Hi-5",
+        "desc": "Episódio de Hi-5"
+      },
+      {
+        "start": "03:00",
+        "end": "04:00",
+        "title": "Backyardigans",
+        "desc": "Episódio de Backyardigans"
+      },
+      {
+        "start": "04:00",
+        "end": "05:00",
+        "title": "Peppa Pig",
+        "desc": "Episódio de Peppa Pig"
+      },
+      {
+        "start": "05:00",
+        "end": "06:00",
+        "title": "Doki",
+        "desc": "Episódio de Doki"
+      },
+      {
+        "start": "06:00",
+        "end": "07:00",
+        "title": "Hi-5",
+        "desc": "Episódio de Hi-5"
+      },
+      {
+        "start": "07:00",
+        "end": "08:00",
+        "title": "Backyardigans",
+        "desc": "Episódio de Backyardigans"
+      },
+      {
+        "start": "08:00",
+        "end": "09:00",
+        "title": "Peppa Pig",
+        "desc": "Episódio de Peppa Pig"
+      },
+      {
+        "start": "09:00",
+        "end": "10:00",
+        "title": "Doki",
+        "desc": "Episódio de Doki"
+      },
+      {
+        "start": "10:00",
+        "end": "11:00",
+        "title": "Hi-5",
+        "desc": "Episódio de Hi-5"
+      },
+      {
+        "start": "11:00",
+        "end": "12:00",
+        "title": "Backyardigans",
+        "desc": "Episódio de Backyardigans"
+      },
+      {
+        "start": "12:00",
+        "end": "13:00",
+        "title": "Peppa Pig",
+        "desc": "Episódio de Peppa Pig"
+      },
+      {
+        "start": "13:00",
+        "end": "14:00",
+        "title": "Doki",
+        "desc": "Episódio de Doki"
+      },
+      {
+        "start": "14:00",
+        "end": "15:00",
+        "title": "Hi-5",
+        "desc": "Episódio de Hi-5"
+      },
+      {
+        "start": "15:00",
+        "end": "16:00",
+        "title": "Backyardigans",
+        "desc": "Episódio de Backyardigans"
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "title": "Peppa Pig",
+        "desc": "Episódio de Peppa Pig"
+      },
+      {
+        "start": "17:00",
+        "end": "18:00",
+        "title": "Doki",
+        "desc": "Episódio de Doki"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00",
+        "title": "Hi-5",
+        "desc": "Episódio de Hi-5"
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "title": "Backyardigans",
+        "desc": "Episódio de Backyardigans"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "title": "Peppa Pig",
+        "desc": "Episódio de Peppa Pig"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "title": "Doki",
+        "desc": "Episódio de Doki"
+      },
+      {
+        "start": "22:00",
+        "end": "23:00",
+        "title": "Hi-5",
+        "desc": "Episódio de Hi-5"
+      },
+      {
+        "start": "23:00",
+        "end": "00:00",
+        "title": "Backyardigans",
+        "desc": "Episódio de Backyardigans"
+      }
+    ],
+    "disneychan": [
+      {
+        "start": "00:00",
+        "end": "01:00",
+        "title": "Phineas e Ferb",
+        "desc": "Episódio de Phineas e Ferb"
+      },
+      {
+        "start": "01:00",
+        "end": "02:00",
+        "title": "Gravity Falls",
+        "desc": "Episódio de Gravity Falls"
+      },
+      {
+        "start": "02:00",
+        "end": "03:00",
+        "title": "Jessie",
+        "desc": "Episódio de Jessie"
+      },
+      {
+        "start": "03:00",
+        "end": "04:00",
+        "title": "Miraculous",
+        "desc": "Episódio de Miraculous"
+      },
+      {
+        "start": "04:00",
+        "end": "05:00",
+        "title": "Phineas e Ferb",
+        "desc": "Episódio de Phineas e Ferb"
+      },
+      {
+        "start": "05:00",
+        "end": "06:00",
+        "title": "Gravity Falls",
+        "desc": "Episódio de Gravity Falls"
+      },
+      {
+        "start": "06:00",
+        "end": "07:00",
+        "title": "Jessie",
+        "desc": "Episódio de Jessie"
+      },
+      {
+        "start": "07:00",
+        "end": "08:00",
+        "title": "Miraculous",
+        "desc": "Episódio de Miraculous"
+      },
+      {
+        "start": "08:00",
+        "end": "09:00",
+        "title": "Phineas e Ferb",
+        "desc": "Episódio de Phineas e Ferb"
+      },
+      {
+        "start": "09:00",
+        "end": "10:00",
+        "title": "Gravity Falls",
+        "desc": "Episódio de Gravity Falls"
+      },
+      {
+        "start": "10:00",
+        "end": "11:00",
+        "title": "Jessie",
+        "desc": "Episódio de Jessie"
+      },
+      {
+        "start": "11:00",
+        "end": "12:00",
+        "title": "Miraculous",
+        "desc": "Episódio de Miraculous"
+      },
+      {
+        "start": "12:00",
+        "end": "13:00",
+        "title": "Phineas e Ferb",
+        "desc": "Episódio de Phineas e Ferb"
+      },
+      {
+        "start": "13:00",
+        "end": "14:00",
+        "title": "Gravity Falls",
+        "desc": "Episódio de Gravity Falls"
+      },
+      {
+        "start": "14:00",
+        "end": "15:00",
+        "title": "Jessie",
+        "desc": "Episódio de Jessie"
+      },
+      {
+        "start": "15:00",
+        "end": "16:00",
+        "title": "Miraculous",
+        "desc": "Episódio de Miraculous"
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "title": "Phineas e Ferb",
+        "desc": "Episódio de Phineas e Ferb"
+      },
+      {
+        "start": "17:00",
+        "end": "18:00",
+        "title": "Gravity Falls",
+        "desc": "Episódio de Gravity Falls"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00",
+        "title": "Jessie",
+        "desc": "Episódio de Jessie"
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "title": "Miraculous",
+        "desc": "Episódio de Miraculous"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "title": "Phineas e Ferb",
+        "desc": "Episódio de Phineas e Ferb"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "title": "Gravity Falls",
+        "desc": "Episódio de Gravity Falls"
+      },
+      {
+        "start": "22:00",
+        "end": "23:00",
+        "title": "Jessie",
+        "desc": "Episódio de Jessie"
+      },
+      {
+        "start": "23:00",
+        "end": "00:00",
+        "title": "Miraculous",
+        "desc": "Episódio de Miraculous"
+      }
+    ],
+    "gloob": [
+      {
+        "start": "00:00",
+        "end": "01:00",
+        "title": "DPA",
+        "desc": "Episódio de DPA"
+      },
+      {
+        "start": "01:00",
+        "end": "02:00",
+        "title": "Bugados",
+        "desc": "Episódio de Bugados"
+      },
+      {
+        "start": "02:00",
+        "end": "03:00",
+        "title": "Valentins",
+        "desc": "Episódio de Valentins"
+      },
+      {
+        "start": "03:00",
+        "end": "04:00",
+        "title": "Escola de Gênios",
+        "desc": "Episódio de Escola de Gênios"
+      },
+      {
+        "start": "04:00",
+        "end": "05:00",
+        "title": "DPA",
+        "desc": "Episódio de DPA"
+      },
+      {
+        "start": "05:00",
+        "end": "06:00",
+        "title": "Bugados",
+        "desc": "Episódio de Bugados"
+      },
+      {
+        "start": "06:00",
+        "end": "07:00",
+        "title": "Valentins",
+        "desc": "Episódio de Valentins"
+      },
+      {
+        "start": "07:00",
+        "end": "08:00",
+        "title": "Escola de Gênios",
+        "desc": "Episódio de Escola de Gênios"
+      },
+      {
+        "start": "08:00",
+        "end": "09:00",
+        "title": "DPA",
+        "desc": "Episódio de DPA"
+      },
+      {
+        "start": "09:00",
+        "end": "10:00",
+        "title": "Bugados",
+        "desc": "Episódio de Bugados"
+      },
+      {
+        "start": "10:00",
+        "end": "11:00",
+        "title": "Valentins",
+        "desc": "Episódio de Valentins"
+      },
+      {
+        "start": "11:00",
+        "end": "12:00",
+        "title": "Escola de Gênios",
+        "desc": "Episódio de Escola de Gênios"
+      },
+      {
+        "start": "12:00",
+        "end": "13:00",
+        "title": "DPA",
+        "desc": "Episódio de DPA"
+      },
+      {
+        "start": "13:00",
+        "end": "14:00",
+        "title": "Bugados",
+        "desc": "Episódio de Bugados"
+      },
+      {
+        "start": "14:00",
+        "end": "15:00",
+        "title": "Valentins",
+        "desc": "Episódio de Valentins"
+      },
+      {
+        "start": "15:00",
+        "end": "16:00",
+        "title": "Escola de Gênios",
+        "desc": "Episódio de Escola de Gênios"
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "title": "DPA",
+        "desc": "Episódio de DPA"
+      },
+      {
+        "start": "17:00",
+        "end": "18:00",
+        "title": "Bugados",
+        "desc": "Episódio de Bugados"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00",
+        "title": "Valentins",
+        "desc": "Episódio de Valentins"
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "title": "Escola de Gênios",
+        "desc": "Episódio de Escola de Gênios"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "title": "DPA",
+        "desc": "Episódio de DPA"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "title": "Bugados",
+        "desc": "Episódio de Bugados"
+      },
+      {
+        "start": "22:00",
+        "end": "23:00",
+        "title": "Valentins",
+        "desc": "Episódio de Valentins"
+      },
+      {
+        "start": "23:00",
+        "end": "00:00",
+        "title": "Escola de Gênios",
+        "desc": "Episódio de Escola de Gênios"
+      }
+    ],
+    "nickjr": [
+      {
+        "start": "00:00",
+        "end": "01:00",
+        "title": "Dora",
+        "desc": "Episódio de Dora"
+      },
+      {
+        "start": "01:00",
+        "end": "02:00",
+        "title": "Patrulha Canina",
+        "desc": "Episódio de Patrulha Canina"
+      },
+      {
+        "start": "02:00",
+        "end": "03:00",
+        "title": "Blaze",
+        "desc": "Episódio de Blaze"
+      },
+      {
+        "start": "03:00",
+        "end": "04:00",
+        "title": "Bubble Guppies",
+        "desc": "Episódio de Bubble Guppies"
+      },
+      {
+        "start": "04:00",
+        "end": "05:00",
+        "title": "Dora",
+        "desc": "Episódio de Dora"
+      },
+      {
+        "start": "05:00",
+        "end": "06:00",
+        "title": "Patrulha Canina",
+        "desc": "Episódio de Patrulha Canina"
+      },
+      {
+        "start": "06:00",
+        "end": "07:00",
+        "title": "Blaze",
+        "desc": "Episódio de Blaze"
+      },
+      {
+        "start": "07:00",
+        "end": "08:00",
+        "title": "Bubble Guppies",
+        "desc": "Episódio de Bubble Guppies"
+      },
+      {
+        "start": "08:00",
+        "end": "09:00",
+        "title": "Dora",
+        "desc": "Episódio de Dora"
+      },
+      {
+        "start": "09:00",
+        "end": "10:00",
+        "title": "Patrulha Canina",
+        "desc": "Episódio de Patrulha Canina"
+      },
+      {
+        "start": "10:00",
+        "end": "11:00",
+        "title": "Blaze",
+        "desc": "Episódio de Blaze"
+      },
+      {
+        "start": "11:00",
+        "end": "12:00",
+        "title": "Bubble Guppies",
+        "desc": "Episódio de Bubble Guppies"
+      },
+      {
+        "start": "12:00",
+        "end": "13:00",
+        "title": "Dora",
+        "desc": "Episódio de Dora"
+      },
+      {
+        "start": "13:00",
+        "end": "14:00",
+        "title": "Patrulha Canina",
+        "desc": "Episódio de Patrulha Canina"
+      },
+      {
+        "start": "14:00",
+        "end": "15:00",
+        "title": "Blaze",
+        "desc": "Episódio de Blaze"
+      },
+      {
+        "start": "15:00",
+        "end": "16:00",
+        "title": "Bubble Guppies",
+        "desc": "Episódio de Bubble Guppies"
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "title": "Dora",
+        "desc": "Episódio de Dora"
+      },
+      {
+        "start": "17:00",
+        "end": "18:00",
+        "title": "Patrulha Canina",
+        "desc": "Episódio de Patrulha Canina"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00",
+        "title": "Blaze",
+        "desc": "Episódio de Blaze"
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "title": "Bubble Guppies",
+        "desc": "Episódio de Bubble Guppies"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "title": "Dora",
+        "desc": "Episódio de Dora"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "title": "Patrulha Canina",
+        "desc": "Episódio de Patrulha Canina"
+      },
+      {
+        "start": "22:00",
+        "end": "23:00",
+        "title": "Blaze",
+        "desc": "Episódio de Blaze"
+      },
+      {
+        "start": "23:00",
+        "end": "00:00",
+        "title": "Bubble Guppies",
+        "desc": "Episódio de Bubble Guppies"
+      }
+    ],
+    "nickelodeon": [
+      {
+        "start": "00:00",
+        "end": "01:00",
+        "title": "Bob Esponja",
+        "desc": "Episódio de Bob Esponja"
+      },
+      {
+        "start": "01:00",
+        "end": "02:00",
+        "title": "iCarly",
+        "desc": "Episódio de iCarly"
+      },
+      {
+        "start": "02:00",
+        "end": "03:00",
+        "title": "The Loud House",
+        "desc": "Episódio de The Loud House"
+      },
+      {
+        "start": "03:00",
+        "end": "04:00",
+        "title": "Henry Danger",
+        "desc": "Episódio de Henry Danger"
+      },
+      {
+        "start": "04:00",
+        "end": "05:00",
+        "title": "Bob Esponja",
+        "desc": "Episódio de Bob Esponja"
+      },
+      {
+        "start": "05:00",
+        "end": "06:00",
+        "title": "iCarly",
+        "desc": "Episódio de iCarly"
+      },
+      {
+        "start": "06:00",
+        "end": "07:00",
+        "title": "The Loud House",
+        "desc": "Episódio de The Loud House"
+      },
+      {
+        "start": "07:00",
+        "end": "08:00",
+        "title": "Henry Danger",
+        "desc": "Episódio de Henry Danger"
+      },
+      {
+        "start": "08:00",
+        "end": "09:00",
+        "title": "Bob Esponja",
+        "desc": "Episódio de Bob Esponja"
+      },
+      {
+        "start": "09:00",
+        "end": "10:00",
+        "title": "iCarly",
+        "desc": "Episódio de iCarly"
+      },
+      {
+        "start": "10:00",
+        "end": "11:00",
+        "title": "The Loud House",
+        "desc": "Episódio de The Loud House"
+      },
+      {
+        "start": "11:00",
+        "end": "12:00",
+        "title": "Henry Danger",
+        "desc": "Episódio de Henry Danger"
+      },
+      {
+        "start": "12:00",
+        "end": "13:00",
+        "title": "Bob Esponja",
+        "desc": "Episódio de Bob Esponja"
+      },
+      {
+        "start": "13:00",
+        "end": "14:00",
+        "title": "iCarly",
+        "desc": "Episódio de iCarly"
+      },
+      {
+        "start": "14:00",
+        "end": "15:00",
+        "title": "The Loud House",
+        "desc": "Episódio de The Loud House"
+      },
+      {
+        "start": "15:00",
+        "end": "16:00",
+        "title": "Henry Danger",
+        "desc": "Episódio de Henry Danger"
+      },
+      {
+        "start": "16:00",
+        "end": "17:00",
+        "title": "Bob Esponja",
+        "desc": "Episódio de Bob Esponja"
+      },
+      {
+        "start": "17:00",
+        "end": "18:00",
+        "title": "iCarly",
+        "desc": "Episódio de iCarly"
+      },
+      {
+        "start": "18:00",
+        "end": "19:00",
+        "title": "The Loud House",
+        "desc": "Episódio de The Loud House"
+      },
+      {
+        "start": "19:00",
+        "end": "20:00",
+        "title": "Henry Danger",
+        "desc": "Episódio de Henry Danger"
+      },
+      {
+        "start": "20:00",
+        "end": "21:00",
+        "title": "Bob Esponja",
+        "desc": "Episódio de Bob Esponja"
+      },
+      {
+        "start": "21:00",
+        "end": "22:00",
+        "title": "iCarly",
+        "desc": "Episódio de iCarly"
+      },
+      {
+        "start": "22:00",
+        "end": "23:00",
+        "title": "The Loud House",
+        "desc": "Episódio de The Loud House"
+      },
+      {
+        "start": "23:00",
+        "end": "00:00",
+        "title": "Henry Danger",
+        "desc": "Episódio de Henry Danger"
+      }
+    ]
+  }
+}
