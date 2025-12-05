@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Video Player com Chromecast para GitHub Pages</title>
+    <title>Player Fixo 1280x720 com Chromecast</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -11,12 +11,31 @@
     <link href="https://cdn.jsdelivr.net/npm/videojs-chromecast@3.0.0/dist/videojs-chromecast.min.css" rel="stylesheet" />
 
     <style>
-        /* CSS para o player ocupar 100% da largura e ter o ícone do Chromecast visível */
-        body, html { margin: 0; padding: 0; overflow: hidden; background-color: #000; }
-        .video-container { width: 100%; padding-top: 56.25%; position: relative; }
-        .video-container .video-js { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        /* CSS de Base */
+        body, html { margin: 0; padding: 0; background-color: #000; }
+
+        /* 💡 DIMENSÕES FIXAS: 1280x720 pixels */
+        .video-container {
+            width: 1280px;
+            height: 720px;
+            position: relative; 
+            margin: 0 auto; /* Centraliza o player na tela */
+        }
         
-        /* Força a visibilidade do ícone (Cinza Inativo) */
+        /* O Player preenche o contêiner fixo */
+        .video-container .video-js { 
+            width: 100%; 
+            height: 100%; 
+        }
+
+        /* 2. CORREÇÃO CRÍTICA: GARANTE QUE A BARRA DE CONTROLE ESTEJA VISÍVEL */
+        .video-js .vjs-control-bar {
+            visibility: visible !important;
+            opacity: 1 !important; 
+            z-index: 2;
+        }
+
+        /* 3. Força a visibilidade do ícone do Chromecast (Cinza Inativo) */
         .video-js .vjs-chromecast-button {
             display: block !important;
             opacity: 0.5;
@@ -42,16 +61,23 @@
     <script src="https://cdn.jsdelivr.net/npm/videojs-chromecast@3.0.0/dist/videojs-chromecast.min.js"></script>
 
     <script>
-        // Inicialização do Player e do Chromecast
         var player = videojs('my-video');
         
-        player.chromecast({
-            appId: 'CC1AD845' // ID Padrão do Google Default Media Receiver
-        });
-        
-        player.on('error', function() {
-            console.error('Erro ao tentar carregar o vídeo. Verifique o link ou a rede.');
-        });
+        // Função que inicializa o Chromecast APENAS depois que o Google Cast SDK está pronto
+        function initializeChromecastPlayer() {
+            player.chromecast({ appId: 'CC1AD845' });
+        }
+
+        // Tenta detectar se a API já carregou (o código otimizado)
+        if (window.chrome && window.chrome.cast && window.chrome.cast.isAvailable) {
+            initializeChromecastPlayer();
+        } else {
+            window.__onGCastApiAvailable = function(isAvailable) {
+                if (isAvailable) {
+                    initializeChromecastPlayer();
+                }
+            };
+        }
     </script>
 
 </body>
