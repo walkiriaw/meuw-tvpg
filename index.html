@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Player Fixo 1280x720 com Chromecast</title>
+    <title>Player Final: 100% Responsivo</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -12,18 +12,27 @@
 
     <style>
         /* CSS de Base */
-        body, html { margin: 0; padding: 0; background-color: #000; }
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            overflow-x: hidden; /* Remove barra de rolagem horizontal */
+            background-color: #000; 
+        }
 
-        /* 💡 DIMENSÕES FIXAS: 1280x720 pixels */
+        /* 💡 CONFIGURAÇÃO RESPONSIVA: 100% Largura (16:9) */
         .video-container {
-            width: 1280px;
-            height: 720px;
+            width: 100%; 
+            max-width: 100%; 
+            padding-top: 56.25%; /* Proporção 16:9 */
             position: relative; 
-            margin: 0 auto; /* Centraliza o player na tela */
+            margin: 0 auto;
         }
         
-        /* O Player preenche o contêiner fixo */
+        /* O Player preenche o contêiner */
         .video-container .video-js { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
             width: 100%; 
             height: 100%; 
         }
@@ -80,5 +89,5 @@
         }
     </script>
 
-</body>
+</body>teste
 </html>
