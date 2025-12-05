@@ -1,93 +1,292 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Player Final: 100% Responsivo</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <script src="//www.gstatic.com/cv/js/sender/fe_rpc_js.js"></script>
+  <meta charset="UTF-8">
+  <title>IPTV BR - Canais Abertos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://unpkg.com/video.js/dist/video-js.css">
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/videojs-http-streaming/dist/videojs-http-streaming.js"></script>
 
-    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/videojs-chromecast@3.0.0/dist/videojs-chromecast.min.css" rel="stylesheet" />
-
-    <style>
-        /* CSS de Base */
-        body, html { 
-            margin: 0; 
-            padding: 0; 
-            overflow-x: hidden; /* Remove barra de rolagem horizontal */
-            background-color: #000; 
-        }
-
-        /* 💡 CONFIGURAÇÃO RESPONSIVA: 100% Largura (16:9) */
-        .video-container {
-            width: 100%; 
-            max-width: 100%; 
-            padding-top: 56.25%; /* Proporção 16:9 */
-            position: relative; 
-            margin: 0 auto;
-        }
-        
-        /* O Player preenche o contêiner */
-        .video-container .video-js { 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-        }
-
-        /* 2. CORREÇÃO CRÍTICA: GARANTE QUE A BARRA DE CONTROLE ESTEJA VISÍVEL */
-        .video-js .vjs-control-bar {
-            visibility: visible !important;
-            opacity: 1 !important; 
-            z-index: 2;
-        }
-
-        /* 3. Força a visibilidade do ícone do Chromecast (Cinza Inativo) */
-        .video-js .vjs-chromecast-button {
-            display: block !important;
-            opacity: 0.5;
-            cursor: pointer;
-        }
-    </style>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+    }
+    .top-bar {
+      background-color: #00a64f;
+      padding: 12px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .tabs {
+      display: flex;
+      background-color: #222;
+    }
+    .tabs button {
+      flex: 1;
+      padding: 14px 0;
+      background: none;
+      border: none;
+      color: #ccc;
+      font-size: 14px;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+    }
+    .tabs button.active {
+      color: #00e676;
+      border-bottom: 2px solid #00e676;
+    }
+    .player {
+      background-color: black;
+      /* Mantenha o player-container aqui para dar um contexto de tamanho */
+      min-height: 200px;
+    }
+    /* Estilos para o Video.js player */
+    .video-js {
+        width: 100% !important; /* Garante que o player Video.js ocupe 100% da largura */
+        height: 200px !important; /* Define a altura padrão do player */
+    }
+    .channel-list {
+      padding: 10px;
+    }
+    .channel {
+      display: flex;
+      align-items: center;
+      background-color: #222;
+      margin-bottom: 10px;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .channel-icon {
+      width: 40px;
+      height: 40px;
+      background-color: #555;
+      border-radius: 50%;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 40px;
+      margin-right: 15px;
+    }
+    .channel-name {
+      flex-grow: 1;
+      font-size: 15px;
+    }
+    .playing {
+      background-color: #0091ea;
+      color: white;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 6px;
+    }
+    .fav-btn {
+      font-size: 20px;
+      color: gray;
+      flex-shrink: 0;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="video-container">
-        <video id="my-video"
-               class="video-js vjs-default-skin vjs-big-play-centered"
-               controls
-               preload="auto"
-               data-setup='{}'>
-            
-            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                    type="video/mp4">
-        </video>
-    </div>
+  <div class="top-bar">📺 IPTV BR</div>
 
-    <script src="https://vjs.zencdn.net/8.10.0/video.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/videojs-chromecast@3.0.0/dist/videojs-chromecast.min.js"></script>
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="canais">CANAIS</button>
+    <button class="tab-btn" data-tab="futebol">FUTEBOL</button>
+    <button class="tab-btn" data-tab="favoritos">FAVORITOS</button>
+  </div>
 
-    <script>
-        var player = videojs('my-video');
-        
-        // Função que inicializa o Chromecast APENAS depois que o Google Cast SDK está pronto
-        function initializeChromecastPlayer() {
-            player.chromecast({ appId: 'CC1AD845' });
+  <div class="player">
+    <video id="my-video" class="video-js vjs-fluid" controls preload="auto" data-setup='{}'>
+      Seu navegador não suporta vídeo.
+    </video>
+  </div>
+
+  <div class="channel-list" id="channel-list"></div>
+
+  <script>
+    const canaisData = [
+      { nome: "Globo SP", url: "https://cdn3.playflix.fun/globosp/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "Globo RJ", url: "https://cdn3.playflix.fun/globorj/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "SBT", url: "https://hplay.tv/augetv/12396547488/38.m3u8" },
+      { nome: "Record", url: "https://cdn3.playflix.fun/recordsp/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "Band", url: "https://hplay.tv/augetv/12396547488/131.m3u8" },
+      { nome: "A&e", url: "https://cdn3.playflix.fun/ae/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" }, { nome: "Amc", url: "https://cdn3.playflix.fun/amc/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" }, { nome: "Axn", url: "https://cdn3.playflix.fun/axn/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },{ nome: "HBO", url: "https://cdn3.playflix.fun/hbo/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+
+      { nome: "HBO2", url: "https://cdn3.playflix.fun/hbo2/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+
+      { nome: "HBO Family", url: "https://cdn3.playflix.fun/hbofamily/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+
+      { nome: "HBO Mundi", url: "https://cdn3.playflix.fun/hbomundi/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+
+      { nome: "HBO Plus", url: "https://cdn3.playflix.fun/hboplus/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+
+      { nome: "HBO PoP", url: "https://cdn3.playflix.fun/hbopop/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+
+      { nome: "HBO Xtreme", url: "https://cdn3.playflix.fun/hboxtreme/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },{ nome: "SporTV", url: "https://cdn3.playflix.fun/sportv/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "SporTV2", url: "https://cdn3.playflix.fun/sportv2/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "SporTV3", url: "https://cdn3.playflix.fun/sportv3/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "Premiere Clubes", url: "https://cdn3.playflix.fun/premiere/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "Premiere 2", url: "https://cdn3.playflix.fun/premiere2/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "Premiere 3", url: "https://cdn3.playflix.fun/premiere3/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "Premiere 4", url: "https://cdn3.playflix.fun/premiere4/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "Premiere 5", url: "https://cdn3.playflix.fun/premiere5/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "Premiere 6", url: "https://cdn3.playflix.fun/premiere6/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "Premiere 7", url: "https://cdn3.playflix.fun/premiere7/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "ESPN", url: "https://cdn3.playflix.fun/espn/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "ESPN 2", url: "https://cdn3.playflix.fun/espn2/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "ESPN 3", url: "https://cdn3.playflix.fun/espn3/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "ESPN 4", url: "https://cdn3.playflix.fun/espn4/index.fmp4.m3u8?token=pede-um-token-e-para-de-roubar-o-meu-mano-88988106600" },
+      { nome: "SeXtreme", url: "https://98.olaiptv.xyz:8443/streams/N9CgRRne9f/a3xJy36TST/216_.m3u8?crypt=" },
+      { nome: "Futebol ao Vivo - Band", url: "https://s.oxax.tv/5s-tOoVIOZA4rBHShmuP2g/29/1761095027/index.m3u8" }
+    ];
+
+    // Inicializa o Video.js player usando o ID 'my-video'
+    // 'player' agora é a instância do Video.js, não mais o elemento HTML bruto
+    const player = videojs('my-video'); 
+
+    // Removida a linha 'const source = document.getElementById('source');' pois não é mais usada diretamente
+
+    const channelList = document.getElementById('channel-list');
+    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+    // Função para entrar/sair do modo tela cheia usando a API do Video.js
+    function toggleFullscreen() {
+      if (player.isFullscreen()) {
+        player.exitFullscreen();
+      } else {
+        player.requestFullscreen();
+      }
+    }
+
+    // Função para carregar e reproduzir o canal usando Video.js
+    function playChannel(url) {
+      player.src({
+        src: url,
+        type: 'application/x-mpegURL' // Informa ao Video.js que é um stream HLS/M3U8
+      });
+      player.play(); // Inicia a reprodução
+    }
+
+    function renderCanais(filtro = 'canais') {
+      channelList.innerHTML = '';
+      let canaisFiltrados = canaisData.filter(c => {
+        if (filtro === 'favoritos') return favoritos.includes(c.nome);
+        if (filtro === 'futebol') {
+          // Ajuste para incluir SporTV, ESPN e Premiere na aba Futebol
+          const nomeLower = c.nome.toLowerCase();
+          return nomeLower.includes("futebol") ||
+                 nomeLower.includes("sportv") ||
+                 nomeLower.includes("espn") ||
+                 nomeLower.includes("premiere") ||
+                 nomeLower.includes("fox sports") ||
+                 nomeLower.includes("bandsports") ||
+                 nomeLower.includes("combate");
         }
+        return true; // Para a aba 'canais', mostra todos (ou todos que não foram filtrados por outras abas)
+      });
 
-        // Tenta detectar se a API já carregou (o código otimizado)
-        if (window.chrome && window.chrome.cast && window.chrome.cast.isAvailable) {
-            initializeChromecastPlayer();
-        } else {
-            window.__onGCastApiAvailable = function(isAvailable) {
-                if (isAvailable) {
-                    initializeChromecastPlayer();
-                }
-            };
-        }
-    </script>
+      if (canaisFiltrados.length === 0) {
+        channelList.innerHTML = '<p style="text-align:center;color:gray;">Nenhum canal encontrado.</p>';
+        return;
+      }
 
-</body>teste
+      canaisFiltrados.forEach(canal => {
+        const div = document.createElement('div');
+        div.className = 'channel';
+        div.dataset.url = canal.url;
+        div.dataset.nome = canal.nome;
+
+        div.innerHTML = `
+          <div class="channel-icon">${canal.nome.charAt(0)}</div>
+          <div class="channel-name">${canal.nome}</div>
+          <div class="fav-btn">${favoritos.includes(canal.nome) ? '❤️' : '♡'}</div>
+        `;
+
+        // Evento de clique único: apenas reproduz o canal
+        div.addEventListener('click', () => {
+          document.querySelectorAll('.playing').forEach(p => p.remove());
+          const nomeEl = div.querySelector('.channel-name');
+          const tocando = document.createElement('span');
+          tocando.className = 'playing';
+          tocando.textContent = 'TOCANDO';
+          nomeEl.appendChild(tocando);
+
+          // Chama a nova função playChannel para carregar o stream com Video.js
+          playChannel(canal.url);
+        });
+
+        // Evento de DUPLO CLIQUE: reproduz o canal e entra em tela cheia
+        div.addEventListener('dblclick', e => {
+          e.stopPropagation(); // Evita que o clique simples também seja ativado
+          
+          // Verifica se a URL atual do player é diferente da URL do canal clicado
+          // player.currentSource().src pega a URL da fonte atualmente carregada no Video.js
+          if (player.currentSource() && player.currentSource().src !== canal.url) { 
+            document.querySelectorAll('.playing').forEach(p => p.remove());
+            const nomeEl = div.querySelector('.channel-name');
+            const tocando = document.createElement('span');
+            tocando.className = 'playing';
+            tocando.textContent = 'TOCANDO';
+            nomeEl.appendChild(tocando);
+            playChannel(canal.url); // Carrega e toca o novo canal
+          } else if (!player.currentSource() || player.paused()) {
+            // Se não tem nada tocando ou está pausado, toca o canal
+            document.querySelectorAll('.playing').forEach(p => p.remove());
+            const nomeEl = div.querySelector('.channel-name');
+            const tocando = document.createElement('span');
+            tocando.className = 'playing';
+            tocando.textContent = 'TOCANDO';
+            nomeEl.appendChild(tocando);
+            playChannel(canal.url);
+          }
+          
+          toggleFullscreen(); // Chama a função para tela cheia
+        });
+
+        div.querySelector('.fav-btn').addEventListener('click', (e) => {
+          e.stopPropagation(); // Previne que o clique no coração ative o clique ou duplo clique do canal
+          const nome = canal.nome;
+          if (favoritos.includes(nome)) {
+            favoritos = favoritos.filter(n => n !== nome);
+          } else {
+            favoritos.push(nome);
+          }
+          localStorage.setItem('favoritos', JSON.stringify(favoritos));
+          // Se estiver na aba de favoritos, renderiza novamente para atualizar o ícone
+          if (document.querySelector('.tab-btn.active').getAttribute('data-tab') === 'favoritos') {
+              renderCanais('favoritos');
+          } else {
+              // Apenas atualiza o ícone do coração no canal atual sem recarregar a lista toda
+              e.target.textContent = favoritos.includes(nome) ? '❤️' : '♡';
+          }
+        });
+
+        channelList.appendChild(div);
+      });
+    }
+
+    // Inicializa a renderização dos canais
+    renderCanais('canais');
+
+    // Lógica para alternar as abas
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderCanais(btn.getAttribute('data-tab'));
+      });
+    });
+
+    // Removida a função isFullscreen e o eventListener de fullscreenchange que não são necessários diretamente com a API do Video.js
+  </script>
+</body>
 </html>
